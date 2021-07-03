@@ -1,7 +1,7 @@
 import * as React from "react";
 import Logo from "../../images/main/logo-header.svg";
 import Button from "../UI/Button";
-import "./style.css";
+import "./style.scss";
 
 // markup
 const Header = () => {
@@ -9,7 +9,7 @@ const Header = () => {
     <header className="header">
       <div className="container container__header">
         <img src={Logo} alt="logo-header" />
-        <div className="header_nav">
+        <div className="header__nav">
           <nav>
             <ul>
               <li className="header__link">
