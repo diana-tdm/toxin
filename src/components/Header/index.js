@@ -1,5 +1,6 @@
 import * as React from "react";
 import Logo from "../../images/main/logo-header.svg";
+import Button from "../UI/Button";
 import "./style.css";
 
 // markup
@@ -28,10 +29,10 @@ const Header = () => {
               </li>
             </ul>
           </nav>
-          <button className="header__button">войти</button>
-          <button className="header__button header__button--blue">
-            зарегистрироваться
-          </button>
+          <Button secondary addClass="header__mr20">
+            войти
+          </Button>
+          <Button>зарегистрироваться</Button>
         </div>
       </div>
     </header>
