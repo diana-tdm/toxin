@@ -10,12 +10,11 @@
   border-radius: 22px;
   height: 34px;
   padding: 0 20px;
-}
 
-.button--secondary {
-  color: #bc9cff;
-  background: linear-gradient(#fff, #fff) padding-box,
-    linear-gradient(to bottom, #bc9cff, #8ba4f9) border-box;
-
-  border: 2px solid transparent;
+  &--secondary {
+    color: #bc9cff;
+    background: linear-gradient(#fff, #fff) padding-box,
+      linear-gradient(to bottom, #bc9cff, #8ba4f9) border-box;
+    border: 2px solid transparent;
+  }
 }
