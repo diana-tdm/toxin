@@ -1,0 +1,20 @@
+.banner {
+  display: flex;
+  height: calc(100vh - 70px);
+  background: url(/images/banner.jpg) no-repeat center / cover;
+
+  &__text {
+    font-size: 14px;
+    line-height: 24px;
+    text-align: right;
+    color: rgba(31, 32, 65, 0.75);
+  }
+}
+
+.container__banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 70px 0px 18px;
+}

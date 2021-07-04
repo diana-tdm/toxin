@@ -5,27 +5,32 @@ import "./style.scss";
 // markup
 const SearchForm = () => {
   return (
-    <form>
+    <form className="searchform">
       <h3 className="searchform__title">Найдём номера под ваши пожелания</h3>
       <div className="searchform__dates">
         <div className="searchform__date">
-          <label>
-            прибытие<input type="date"></input>
+          <label className="searchform__date-label">
+            прибытие
+            <input className="searchform__date-input" type="date"></input>
           </label>
         </div>
         <div className="searchform__date">
-          <label>
-            выезд<input type="date"></input>
+          <label className="searchform__date-label">
+            выезд<input className="searchform__date-input" type="date"></input>
           </label>
         </div>
       </div>
-      <label>
+      <label className="searchform__date-label">
         гости
-        <select value="Сколько гостей">
-          <option>1</option>
+        <select className="searchform__select">
+          <option value="" disabled selected>
+            Сколько гостей
+          </option>
+          <option value="1">1</option>
+          <option value="2">2</option>
         </select>
       </label>
-      <Button>подобрать номер</Button>
+      <Button addClass="searchform__button">подобрать номер</Button>
     </form>
   );
 };
