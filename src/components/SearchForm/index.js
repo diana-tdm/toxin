@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Link } from "gatsby";
 import Button from "../UI/Button";
 import "./style.scss";
 
@@ -30,7 +31,9 @@ const SearchForm = () => {
           <option value="2">2</option>
         </select>
       </label>
-      <Button addClass="searchform__button">подобрать номер</Button>
+      <Link className="searchform__link" to="/search-room">
+        <Button addClass="searchform__button">подобрать номер</Button>
+      </Link>
     </form>
   );
 };

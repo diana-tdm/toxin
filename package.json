@@ -17,6 +17,11 @@
   "dependencies": {
     "@fontsource/montserrat": "^4.4.5",
     "@fontsource/quicksand": "^4.4.5",
+    "@fortawesome/fontawesome-free": "^5.15.3",
+    "@fortawesome/fontawesome-svg-core": "^1.2.35",
+    "@fortawesome/free-brands-svg-icons": "^5.15.3",
+    "@fortawesome/free-solid-svg-icons": "^5.15.3",
+    "@fortawesome/react-fontawesome": "^0.1.14",
     "gatsby": "^3.8.1",
     "gatsby-plugin-sass": "^4.8.0",
     "react": "^17.0.1",
