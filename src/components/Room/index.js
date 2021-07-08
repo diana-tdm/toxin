@@ -1,6 +1,7 @@
 import * as React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
+import { faStar as faStarEmpty } from "@fortawesome/free-regular-svg-icons";
 import "./style.scss";
 
 // markup
@@ -24,7 +25,7 @@ const Room = () => {
           <FontAwesomeIcon icon={faStar} size="1x" />
           <FontAwesomeIcon icon={faStar} size="1x" />
           <FontAwesomeIcon icon={faStar} size="1x" />
-          <FontAwesomeIcon icon={faStar} size="1x" />
+          <FontAwesomeIcon icon={faStarEmpty} size="1x" />
         </div>
         <div className="room__reviews">
           <span className="room__reviews-number">145</span> Отзывов
