@@ -1,5 +1,6 @@
 import * as React from "react";
 import Room from "../Room";
+import Pagination from "../UI/Pagination";
 import "./style.scss";
 
 // markup
@@ -21,6 +22,7 @@ const Rooms = () => {
         <Room />
         <Room />
       </div>
+      <Pagination />
     </>
   );
 };
