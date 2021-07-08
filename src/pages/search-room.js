@@ -1,17 +1,18 @@
 import * as React from "react";
 import Header from "../components/Header";
-
+import SearchRoom from "../components/SearchRoom";
 import Footer from "../components/Footer";
 
 // markup
-const IndexPage = () => {
+const SearchRoomPage = () => {
   return (
     <main>
       <title>Home Page</title>
       <Header />
+      <SearchRoom />
       <Footer />
     </main>
   );
 };
 
-export default IndexPage;
+export default SearchRoomPage;
