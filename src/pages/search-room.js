@@ -7,7 +7,7 @@ import Footer from "../components/Footer";
 const SearchRoomPage = () => {
   return (
     <main>
-      <title>Home Page</title>
+      <title>Подбор номера</title>
       <Header />
       <SearchRoom />
       <Footer />

@@ -1,0 +1,83 @@
+.room-info {
+  padding: 70px 0px;
+
+  &__comfort {
+    margin: 0px 70px 30px 0px;
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 24px;
+    color: #1f2041;
+  }
+
+  &__items {
+    display: flex;
+  }
+
+  &__chart-legend {
+    display: flex;
+    align-items: flex-end;
+    margin-top: 20px;
+  }
+
+  &__chart {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin-right: 30px;
+
+    &-hint {
+      position: absolute;
+      text-align: center;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &-number {
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 24px;
+      color: #bc9cff;
+    }
+
+    &-text {
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 12px;
+      color: #bc9cff;
+    }
+  }
+
+  &__legend {
+    display: block;
+    font-size: 14px;
+    line-height: 24px;
+    color: rgba(31, 32, 65, 0.75);
+    &-item {
+      margin-left: 15px;
+      position: relative;
+      &::before {
+        position: absolute;
+        content: "";
+        background: linear-gradient(180deg, #ffe39c 0%, #ffba9c 100%);
+        border-radius: 50%;
+        width: 10px;
+        height: 10px;
+        left: -15px;
+        top: 6px;
+      }
+      &--good::before {
+        background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+      }
+      &--normal::before {
+        background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+      }
+      &--bad::before {
+        background: linear-gradient(180deg, #919191 0%, #3d4975 100%);
+      }
+    }
+  }
+}

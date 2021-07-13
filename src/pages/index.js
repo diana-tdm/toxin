@@ -7,7 +7,7 @@ import Footer from "../components/Footer";
 const IndexPage = () => {
   return (
     <main>
-      <title>Home Page</title>
+      <title>Отель Toxin</title>
       <Header />
       <Banner />
       <Footer />
