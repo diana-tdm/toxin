@@ -2,16 +2,24 @@
   width: 380px;
   background: #ffffff;
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.12);
   border-radius: 4px;
   padding: 40px 30px 30px 30px;
 
   &__info {
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+    align-items: flex-end;
   }
 
   &__number {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+    color: #1f2041;
+  }
+
+  &__element {
     font-weight: bold;
     font-size: 14px;
     line-height: 17px;
@@ -68,5 +76,83 @@
       line-height: 18px;
       color: rgba(31, 32, 65, 0.75);
     }
+  }
+
+  &__guest {
+    width: 100%;
+  }
+
+  &__select {
+    display: flex;
+    width: 100%;
+    background: #ffffff;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 11px 15px 8px;
+    margin-top: 5px;
+    font-size: 14px;
+    line-height: 18px;
+    color: rgba(31, 32, 65, 0.75);
+  }
+
+  &__services {
+    padding-top: 20px;
+    font-size: 14px;
+    line-height: 24px;
+    color: rgba(31, 32, 65, 0.75);
+
+    &-list {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    &-items {
+      display: flex;
+      flex: 0 0 100px;
+      justify-content: space-between;
+    }
+
+    &-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 20px;
+      height: 20px;
+      border: 1px solid #1f204140;
+      border-radius: 50%;
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 14px;
+      color: rgba(31, 32, 65, 0.25);
+    }
+
+    &-total {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-weight: bold;
+      font-size: 19px;
+      line-height: 24px;
+      color: #1f2041;
+      margin: 20px 0px;
+
+      &-border {
+        height: 1px;
+        flex: 1 1 100%;
+        box-sizing: border-box;
+        border-bottom: 1px dashed rgba(31, 32, 65, 0.25);
+        margin: 0px 5px;
+      }
+
+      &-price {
+        white-space: nowrap;
+      }
+    }
+  }
+
+  &__button-arrow {
+    width: 100%;
   }
 }
