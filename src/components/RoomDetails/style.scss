@@ -1,0 +1,84 @@
+.container__room-details {
+  display: flex;
+}
+
+.room-details {
+  display: flex;
+
+  &__review {
+    display: flex;
+    justify-content: space-between;
+
+    &-title {
+      font-weight: bold;
+      font-size: 19px;
+      line-height: 24px;
+      color: #1f2041;
+      margin-bottom: 20px;
+    }
+
+    &-count {
+      font-size: 14px;
+      line-height: 14px;
+      text-align: right;
+      color: rgba(31, 32, 65, 0.5);
+    }
+  }
+
+  &__rules-revoke {
+    display: flex;
+    margin: 10px 0px 70px;
+  }
+
+  &__rules {
+    flex-basis: calc(50% - 35px);
+    margin-right: 70px;
+    padding-left: 20px;
+    &-list {
+      font-size: 14px;
+      line-height: 24px;
+      color: rgba(31, 32, 65, 0.75);
+      &-item {
+        position: relative;
+      }
+      &-item::before {
+        position: absolute;
+        content: "";
+        background: rgba(31, 32, 65, 0.25);
+        border-radius: 50%;
+        width: 10px;
+        height: 10px;
+        left: -15px;
+        top: 6px;
+      }
+    }
+  }
+
+  &__rules-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__revoke {
+    flex-basis: calc(50% - 35px);
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 24px;
+    color: #1f2041;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 24px;
+    color: rgba(31, 32, 65, 0.75);
+  }
+
+  &__form {
+    width: 380px;
+    margin-left: 70px;
+  }
+}
