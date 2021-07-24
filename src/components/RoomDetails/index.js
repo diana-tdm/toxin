@@ -2,6 +2,7 @@ import * as React from "react";
 import RoomBanner from "../RoomBanner";
 import RoomInfo from "../RoomInfo";
 import Review from "../Review";
+import CalcForm from "../CalcForm";
 import "./style.scss";
 
 // markup
@@ -49,7 +50,9 @@ const RoomDetails = () => {
           </div>
         </div>
 
-        <div className="room-details__form"></div>
+        <div className="room-details__form">
+          <CalcForm />
+        </div>
       </div>
     </>
   );
