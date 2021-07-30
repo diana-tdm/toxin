@@ -4,4 +4,5 @@ module.exports = {
   },
   plugins: [`gatsby-plugin-sass`],
   pathPrefix: "/toxin",
+  assetPrefix: "/toxin",
 };
