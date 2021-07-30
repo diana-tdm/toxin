@@ -1,7 +1,7 @@
 .banner {
   display: flex;
   height: calc(100vh - 70px);
-  background: url(/images/banner.jpg) no-repeat center / cover;
+  background: url(../../images/banner.jpg) no-repeat center / cover;
 
   &__text {
     font-size: 14px;
