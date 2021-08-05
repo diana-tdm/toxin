@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Link } from "gatsby";
 import Button from "../UI/Button";
+import SelectDate from "../UI/SelectDate";
 import "./style.scss";
 
 // markup
@@ -8,19 +9,7 @@ const SearchForm = () => {
   return (
     <form className="searchform">
       <h3 className="searchform__title">Найдём номера под ваши пожелания</h3>
-      <div className="searchform__dates">
-        <div className="searchform__date">
-          <label className="searchform__date-label">
-            прибытие
-            <input className="searchform__date-input" type="date"></input>
-          </label>
-        </div>
-        <div className="searchform__date">
-          <label className="searchform__date-label">
-            выезд<input className="searchform__date-input" type="date"></input>
-          </label>
-        </div>
-      </div>
+      <SelectDate />
       <label className="searchform__date-label">
         гости
         <select className="searchform__select">
