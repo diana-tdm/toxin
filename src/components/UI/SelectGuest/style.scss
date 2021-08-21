@@ -9,10 +9,14 @@
 
   &__wrapper {
     border: 1px solid rgba(31, 32, 65, 0.25);
-    box-sizing: border-box;
     border-radius: 4px;
     margin-top: 5px;
-    overflow: hidden;
+    position: relative;
+    transition: 0.3s;
+
+    &--open {
+      border-radius: 4px 4px 0 0;
+    }
   }
 
   &__button {
@@ -28,7 +32,6 @@
     font-weight: normal;
     font-size: 14px;
     color: rgba(31, 32, 65, 0.75);
-    border-bottom: 1px solid rgba(31, 32, 65, 0.25);
 
     &::before {
       position: absolute;
@@ -42,12 +45,18 @@
   &__dropdown {
     position: absolute;
     padding: 5px 7px 13px 15px;
-    display: none;
-    width: 100%;
+    opacity: 0;
+    transition: 0.3s;
+    width: 320px;
     z-index: 10;
+    background: white;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    box-sizing: border-box;
+    border-radius: 0 0 4px 4px;
+    left: -1px;
 
-    &--active {
-      display: block;
+    &--open {
+      opacity: 1;
     }
 
     &-item {
@@ -74,6 +83,12 @@
         border: 1px solid rgba(31, 32, 65, 0.25);
         border-radius: 50%;
         background: transparent;
+        transition: 0.3s;
+
+        &:disabled {
+          opacity: 0.5;
+          cursor: not-allowed;
+        }
       }
     }
 
