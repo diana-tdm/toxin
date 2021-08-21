@@ -8,7 +8,7 @@ import "./style.scss";
 // markup
 const SearchForm = () => {
   return (
-    <form className="searchform">
+    <form className="searchform" action="">
       <h3 className="searchform__title">Найдём номера под ваши пожелания</h3>
       <SelectDate />
       <SelectGuest />
