@@ -9,9 +9,23 @@ const SelectGuest = () => {
   const [adult, setAdult] = React.useState(0);
   const [children, setChildren] = React.useState(0);
   const [infant, setInfant] = React.useState(0);
+  const [text, setText] = React.useState("Сколько гостей");
 
   const handleClick = () => {
     setOpen(!open);
+  };
+
+  const clear = () => {
+    setAdult(0);
+    setChildren(0);
+    setInfant(0);
+    setText("Сколько гостей");
+  };
+
+  const apply = () => {
+    const count = adult + children + infant;
+    setText(`${count} гостей`);
+    setOpen(false);
   };
 
   return (
@@ -27,7 +41,7 @@ const SelectGuest = () => {
           className="select-guest__button"
           onClick={handleClick}
         >
-          <span>Сколько гостей</span>
+          <span>{text}</span>
           <FontAwesomeIcon icon={faChevronDown} size="1x" />
         </button>
         <div
@@ -93,8 +107,20 @@ const SelectGuest = () => {
             </button>
           </div>
           <div className="select-guest__dropdown-buttons">
-            <button className="select-guest__dropdown-button">очистить</button>
-            <button className="select-guest__dropdown-button">применить</button>
+            <button
+              type="button"
+              onClick={clear}
+              className="select-guest__dropdown-button"
+            >
+              очистить
+            </button>
+            <button
+              type="button"
+              onClick={apply}
+              className="select-guest__dropdown-button"
+            >
+              применить
+            </button>
           </div>
         </div>
       </div>

@@ -54,9 +54,11 @@
     box-sizing: border-box;
     border-radius: 0 0 4px 4px;
     left: -1px;
+    pointer-events: none;
 
     &--open {
       opacity: 1;
+      pointer-events: initial;
     }
 
     &-item {
