@@ -3,15 +3,32 @@ import { Link } from "gatsby";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { faStar as faStarEmpty } from "@fortawesome/free-regular-svg-icons";
+import ReactSiema from "react-siema";
 import "./style.scss";
 
+const options = {
+  resizeDebounce: 250,
+  duration: 200,
+  easing: "ease-out",
+  perPage: 1,
+  startIndex: 0,
+  draggable: true,
+  threshold: 20,
+  loop: false,
+};
+
 // markup
-const Room = () => {
+const Room = ({ id }) => {
   return (
     <Link to="/rooms/1">
       <div className="room">
         <div>
-          <img src="/images/rooms/01.jpg" />
+          <ReactSiema {...options}>
+            <img src={`/images/rooms/0${id}.jpg`} />
+            <img src={`/images/rooms/0${id}.jpg`} />
+            <img src={`/images/rooms/0${id}.jpg`} />
+            <img src={`/images/rooms/0${id}.jpg`} />
+          </ReactSiema>
         </div>
         <div className="room__info">
           <div className="room__number">

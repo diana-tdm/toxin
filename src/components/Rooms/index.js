@@ -9,10 +9,10 @@ const Rooms = () => {
     <>
       <h1 className="rooms__title">Номера, которые мы для вас подобрали</h1>
       <div className="rooms">
-        <Room />
-        <Room />
-        <Room />
-        <Room />
+        <Room id={1} />
+        <Room id={2} />
+        <Room id={3} />
+        <Room id={4} />
         <Room />
         <Room />
         <Room />
