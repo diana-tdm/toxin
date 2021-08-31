@@ -5,22 +5,14 @@ import "./style.scss";
 
 // markup
 const Rooms = () => {
+  const rooms = Array.from({ length: 12 }, (_, index) => index + 1);
   return (
     <>
       <h1 className="rooms__title">Номера, которые мы для вас подобрали</h1>
       <div className="rooms">
-        <Room id={1} />
-        <Room id={2} />
-        <Room id={3} />
-        <Room id={4} />
-        <Room />
-        <Room />
-        <Room />
-        <Room />
-        <Room />
-        <Room />
-        <Room />
-        <Room />
+        {rooms.map((id) => (
+          <Room id={id} />
+        ))}
       </div>
       <Pagination />
     </>
