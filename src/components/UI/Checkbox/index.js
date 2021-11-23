@@ -6,8 +6,16 @@ const Checkbox = () => {
   return (
     <div className="checkbox">
       <div className="checkbox__title">Checkbox Buttons</div>
-      <label>
-        <input type="checkbox"></input>Можно курить
+      <label className="checkbox__label">
+        <input className="checkbox__input" type="checkbox"></input>Можно курить
+      </label>
+      <label className="checkbox__label">
+        <input className="checkbox__input" type="checkbox"></input>Можно с
+        питомцами
+      </label>
+      <label className="checkbox__label">
+        <input className="checkbox__input" type="checkbox"></input>Можно
+        пригласить гостей <br /> (до 10 человек)
       </label>
     </div>
   );
