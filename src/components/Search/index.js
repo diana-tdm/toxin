@@ -3,6 +3,7 @@ import SelectDate from "../UI/SelectDate";
 import SelectGuest from "../UI/SelectGuest";
 import PriceRange from "../UI/PriceRange";
 import Checkbox from "../UI/Checkbox";
+import Properties from "../UI/Properties";
 import "./style.scss";
 
 // markup
@@ -13,6 +14,7 @@ const Search = () => {
       <SelectGuest />
       <PriceRange />
       <Checkbox />
+      <Properties />
     </div>
   );
 };
