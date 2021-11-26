@@ -18,6 +18,7 @@ function countInfant(count) {
   if (count > 4) return `${count} младенцев`;
   return `${count} младенца`;
 }
+
 // markup
 const SelectGuest = ({ secondary }) => {
   const [open, setOpen] = React.useState(false);

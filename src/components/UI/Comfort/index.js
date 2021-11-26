@@ -3,30 +3,48 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import "./style.scss";
 
+function countRoom(count) {
+  if (count == 1) return "1 спальня";
+  if (count > 4) return `${count} спален`;
+  return `${count} спальни`;
+}
+function countBed(count) {
+  if (count == 1) return "1 кровать";
+  if (count > 4) return `${count} кроватей`;
+  return `${count} кровати`;
+}
+function countBathroom(count) {
+  if (count == 1) return "1 ванная";
+  if (count > 4) return `${count} ванных`;
+  return `${count} ванные`;
+}
+
 // markup
 const Comfort = () => {
   const [open, setOpen] = React.useState(false);
-  const [adult, setAdult] = React.useState(0);
-  const [children, setChildren] = React.useState(0);
-  const [infant, setInfant] = React.useState(0);
-  const [text, setText] = React.useState("Сколько гостей");
+  const [room, setRoom] = React.useState(1);
+  const [bed, setBed] = React.useState(1);
+  const [bathroom, setBathroom] = React.useState(0);
+  const [text, setText] = React.useState("1 спальня, 1 кровать");
 
   const handleClick = () => {
     setOpen(!open);
   };
 
   const clear = () => {
-    setAdult(0);
-    setChildren(0);
-    setInfant(0);
+    setRoom(0);
+    setBed(0);
+    setBathroom(0);
     setText("Сколько гостей");
   };
 
-  const apply = () => {
-    const count = adult + children + infant;
-    setText(`${count} гостей`);
-    setOpen(false);
-  };
+  React.useEffect(() => {
+    setText(
+      `${countRoom(room)}${bed ? `, ${countBed(bed)}` : ""} ${
+        bathroom ? ` , ${countBathroom(bathroom)}` : ""
+      } `
+    );
+  }, [room, bed, bathroom]);
 
   return (
     <label className="comfort">
@@ -47,16 +65,16 @@ const Comfort = () => {
             <div className="comfort__dropdown-item-title">спальни </div>
             <button
               type="button"
-              onClick={() => setAdult(adult - 1)}
+              onClick={() => setRoom(room - 1)}
               className="comfort__dropdown-item-button"
-              disabled={adult === 0}
+              disabled={room === 1}
             >
               -
             </button>
-            <div className="comfort__dropdown-item-count">{adult}</div>
+            <div className="comfort__dropdown-item-count">{room}</div>
             <button
               type="button"
-              onClick={() => setAdult(adult + 1)}
+              onClick={() => setRoom(room + 1)}
               className="comfort__dropdown-item-button"
             >
               +
@@ -66,16 +84,16 @@ const Comfort = () => {
             <div className="comfort__dropdown-item-title">кровати </div>
             <button
               type="button"
-              onClick={() => setChildren(children - 1)}
+              onClick={() => setBed(bed - 1)}
               className="comfort__dropdown-item-button"
-              disabled={children === 0}
+              disabled={bed === 1}
             >
               -
             </button>
-            <div className="comfort__dropdown-item-count">{children}</div>
+            <div className="comfort__dropdown-item-count">{bed}</div>
             <button
               type="button"
-              onClick={() => setChildren(children + 1)}
+              onClick={() => setBed(bed + 1)}
               className="comfort__dropdown-item-button"
             >
               +
@@ -85,16 +103,20 @@ const Comfort = () => {
             <div className="comfort__dropdown-item-title">ванные комнаты </div>
             <button
               type="button"
-              onClick={() => setInfant(infant - 1)}
+              onClick={() => {
+                setBathroom(bathroom - 1);
+              }}
               className="comfort__dropdown-item-button"
-              disabled={infant === 0}
+              disabled={bathroom === 0}
             >
               -
             </button>
-            <div className="comfort__dropdown-item-count">{infant}</div>
+            <div className="comfort__dropdown-item-count">{bathroom}</div>
             <button
               type="button"
-              onClick={() => setInfant(infant + 1)}
+              onClick={() => {
+                setBathroom(bathroom + 1);
+              }}
               className="comfort__dropdown-item-button"
             >
               +

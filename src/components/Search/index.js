@@ -5,6 +5,7 @@ import PriceRange from "../UI/PriceRange";
 import Checkbox from "../UI/Checkbox";
 import Properties from "../UI/Properties";
 import Comfort from "../UI/Comfort";
+import Addcomfort from "../UI/Addcomfort";
 import "./style.scss";
 
 // markup
@@ -17,6 +18,7 @@ const Search = () => {
       <Checkbox />
       <Properties />
       <Comfort />
+      <Addcomfort />
     </div>
   );
 };
