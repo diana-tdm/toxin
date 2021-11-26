@@ -9,11 +9,28 @@ const SelectDate = ({ children, secondary, arrow, addClass }) => {
   const arrivalField = React.useRef(null);
   const leaveField = React.useRef(null);
   const datesField = React.useRef(null);
+  const twoDatesField = React.useRef(null);
 
   function onSelect(formattedDate, date, inst) {
     const dates = formattedDate.split(",");
-    arrivalField.current.value = dates[0] ?? "";
-    leaveField.current.value = dates[1] ?? "";
+    if (secondary) {
+      const format = new Intl.DateTimeFormat("ru", {
+        month: "short",
+        day: "numeric",
+      }).format;
+
+      const arr = dates[0]
+        ? new Date(dates[0].split(".").reverse().join("."))
+        : new Date();
+      const leave = dates[1]
+        ? new Date(dates[1].split(".").reverse().join("."))
+        : new Date();
+
+      twoDatesField.current.value = format(arr) + " - " + format(leave);
+    } else {
+      leaveField.current.value = dates[1] ?? "";
+      arrivalField.current.value = dates[0] ?? "";
+    }
   }
 
   function toggle() {
@@ -41,29 +58,49 @@ const SelectDate = ({ children, secondary, arrow, addClass }) => {
   }, []);
   return (
     <div className="select-date">
-      <div className="select-date__date ">
-        <label className="select-date__date-label">
-          прибытие
-          <input
-            ref={arrivalField}
-            className="select-date__date-input"
-            type="text"
-            onClick={toggle}
-          ></input>
-        </label>
-      </div>
-      <div className="select-date__date">
-        <label className="select-date__date-label">
-          выезд
-          <input
-            ref={leaveField}
-            className="select-date__date-input"
-            type="text"
-            onClick={toggle}
-          ></input>
-        </label>
-        <input ref={datesField} className="select-date__hidden-input"></input>
-      </div>
+      {secondary ? (
+        <div className="select-date__date select-date__date--secondary">
+          <label className="select-date__date-label">
+            даты пребывания в отеле
+            <input
+              ref={twoDatesField}
+              className="select-date__date-input"
+              type="text"
+              onClick={toggle}
+            ></input>
+          </label>
+          <input ref={datesField} className="select-date__hidden-input"></input>
+        </div>
+      ) : (
+        <>
+          <div className="select-date__date ">
+            <label className="select-date__date-label">
+              прибытие
+              <input
+                ref={arrivalField}
+                className="select-date__date-input"
+                type="text"
+                onClick={toggle}
+              ></input>
+            </label>
+          </div>
+          <div className="select-date__date">
+            <label className="select-date__date-label">
+              выезд
+              <input
+                ref={leaveField}
+                className="select-date__date-input"
+                type="text"
+                onClick={toggle}
+              ></input>
+            </label>
+            <input
+              ref={datesField}
+              className="select-date__hidden-input"
+            ></input>
+          </div>
+        </>
+      )}
     </div>
   );
 };
