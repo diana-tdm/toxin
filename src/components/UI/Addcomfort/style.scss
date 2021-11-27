@@ -2,11 +2,26 @@
   margin-top: 30px;
 
   &__title {
+    display: flex;
+    justify-content: space-between;
     font-weight: bold;
     font-size: 12px;
     text-transform: uppercase;
     color: #1f2041;
+    width: 100%;
     margin-bottom: 16px;
+    padding-right: 20px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+  }
+
+  &__icon {
+    color: rgba(31, 32, 65, 0.5);
+    transition: 0.3s;
+    &--active {
+      transform: rotate(180deg);
+    }
   }
 
   &__label {
