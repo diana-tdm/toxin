@@ -23,3 +23,14 @@
     margin-top: 10px;
   }
 }
+.rc-slider-track {
+  background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+}
+
+.rc-slider-handle {
+  width: 16px;
+  height: 16px;
+  margin-top: -6px;
+  border: solid 2px #fff;
+  background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+}
