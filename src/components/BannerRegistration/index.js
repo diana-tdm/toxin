@@ -3,14 +3,14 @@ import RegistrationForm from "../RegistrationForm";
 import "./style.scss";
 
 // markup
-const Banner = () => {
+const BannerRegistration = () => {
   return (
     <section className="banner-registration">
-      <div className="container">
+      <div className="container container--registration">
         <RegistrationForm />
       </div>
     </section>
   );
 };
 
-export default Banner;
+export default BannerRegistration;
