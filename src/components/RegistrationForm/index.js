@@ -43,7 +43,7 @@ const RegistrationForm = () => {
       <div className="registration-form__switch">
         <Switch>Получать спецпредложения</Switch>{" "}
       </div>
-      <Button>перейти к оплате</Button>
+      <Button arrow>перейти к оплате</Button>
       <div className="registration-form__login">
         <div>Уже есть аккаунт на Toxin</div>
         <Button secondary>войти</Button>
