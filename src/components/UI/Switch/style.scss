@@ -15,6 +15,10 @@
     background: #ffffff;
     margin-right: 10px;
     padding: 3px;
+    transition: 0.3s;
+    &--active {
+      border: 1px solid #bc9cff;
+    }
   }
 
   &__circle {
@@ -22,5 +26,10 @@
     height: 12px;
     background: rgba(31, 32, 65, 0.25);
     border-radius: 50%;
+    transition: 0.3s;
+    &--active {
+      background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+      transform: translate(20px, 0);
+    }
   }
 }
