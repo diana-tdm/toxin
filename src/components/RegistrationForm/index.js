@@ -22,6 +22,26 @@ const RegistrationForm = () => {
         type="text"
         placeholder="Фамилия"
       ></input>
+      <div className="registration-form__sex">
+        <label>
+          <input
+            className="registration-form__radio"
+            type="radio"
+            name="sex"
+            value="male"
+          ></input>
+          Мужчина
+        </label>
+        <label>
+          <input
+            className="registration-form__radio"
+            type="radio"
+            name="sex"
+            value="female"
+          ></input>
+          Женщина
+        </label>
+      </div>
       <SelectBirthday />
       <div className="registration-form__subtitle">
         данные для входа в сервис
