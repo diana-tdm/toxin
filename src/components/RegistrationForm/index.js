@@ -5,6 +5,7 @@ import SelectDate from "../UI/SelectDate";
 import SelectGuest from "../UI/SelectGuest";
 import Switch from "../UI/Switch";
 import "./style.scss";
+import SelectBirthday from "../UI/SelectBirthday";
 
 // markup
 const RegistrationForm = () => {
@@ -21,12 +22,7 @@ const RegistrationForm = () => {
         type="text"
         placeholder="Фамилия"
       ></input>
-      <div className="registration-form__subtitle">дата рождения</div>
-      <input
-        className="registration-form__input"
-        type="text"
-        placeholder="ДД.ММ.ГГГГ"
-      ></input>
+      <SelectBirthday />
       <div className="registration-form__subtitle">
         данные для входа в сервис
       </div>

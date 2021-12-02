@@ -1,0 +1,218 @@
+.select-birthday {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0px 0px;
+
+  &__hidden-input {
+    position: absolute;
+    opacity: 0;
+    left: 0;
+    top: 35px;
+  }
+
+  &__date {
+    width: 100%;
+
+    &-label {
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 15px;
+      text-transform: uppercase;
+      color: #1f2041;
+    }
+
+    &-input {
+      width: 100%;
+      background: #ffffff;
+      border: 1px solid rgba(31, 32, 65, 0.25);
+      box-sizing: border-box;
+      border-radius: 4px;
+      padding: 11px 15px 8px;
+      margin-top: 5px;
+      font-size: 14px;
+      line-height: 18px;
+      color: rgba(31, 32, 65, 0.75);
+      &::placeholder {
+        color: rgba(31, 32, 65, 0.25);
+      }
+    }
+  }
+}
+
+.datepicker--pointer {
+  display: none;
+}
+
+.datepicker--nav-action {
+  color: #bc9cff;
+}
+
+.datepicker--nav svg {
+  width: 15px;
+  height: 15px;
+}
+
+.datepicker--cell-day {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: rgba(31, 32, 65, 0.5);
+  width: 40px;
+  height: 40px;
+}
+
+.datepicker {
+  width: 320px;
+
+  &--nav-title {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 24px;
+    text-align: center;
+    color: #1f2041;
+
+    & i {
+      color: #1f2041;
+    }
+  }
+
+  &--nav {
+    border-bottom: none;
+    padding-top: 20px;
+  }
+
+  &--buttons {
+    border-top: none;
+
+    & [data-action] {
+      color: transparent;
+      position: relative;
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 15px;
+        text-transform: uppercase;
+        color: rgba(31, 32, 65, 0.5);
+        padding: 0px 20px;
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    & [data-action="today"] {
+      &::before {
+        content: "очистить";
+      }
+    }
+
+    & [data-action="clear"] {
+      &::before {
+        content: "применить";
+        justify-content: flex-end;
+      }
+    }
+  }
+}
+
+.datepicker--cells-days {
+  justify-content: space-between;
+}
+
+.datepicker--content {
+  padding: 30px 20px 20px;
+}
+
+.datepicker--day-name {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #bc9cff;
+}
+
+.datepicker--cell-day {
+  font-family: Montserrat;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 15px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: rgba(31, 32, 65, 0.5);
+  border-radius: 50%;
+
+  &.-current- {
+    font-weight: bold;
+    color: #ffffff;
+    background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+
+    &:hover {
+      color: #ffffff;
+    }
+  }
+
+  &.-selected- {
+    font-weight: bold;
+    background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+    border-radius: 50%;
+    &:hover {
+      background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+    }
+  }
+
+  &.-in-range- {
+    background: linear-gradient(
+      180deg,
+      rgba(187, 156, 255, 0.25) 0%,
+      rgba(139, 165, 249, 0.25) 100%
+    );
+  }
+  &.-range-from-::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 50%;
+    background: linear-gradient(
+      180deg,
+      rgba(187, 156, 255, 0.25) 0%,
+      rgba(139, 165, 249, 0.25) 100%
+    );
+    z-index: -1;
+  }
+
+  &.-range-to-::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    right: 50%;
+    left: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(187, 156, 255, 0.25) 0%,
+      rgba(139, 165, 249, 0.25) 100%
+    );
+    z-index: -1;
+  }
+}
