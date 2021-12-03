@@ -1,11 +1,9 @@
 import * as React from "react";
 import { Link } from "gatsby";
 import Button from "../UI/Button";
-import SelectDate from "../UI/SelectDate";
-import SelectGuest from "../UI/SelectGuest";
 import Switch from "../UI/Switch";
-import "./style.scss";
 import SelectBirthday from "../UI/SelectBirthday";
+import "./style.scss";
 
 // markup
 const RegistrationForm = () => {
@@ -23,16 +21,17 @@ const RegistrationForm = () => {
         placeholder="Фамилия"
       ></input>
       <div className="registration-form__sex">
-        <label>
+        <label className="registration-form__radio-label">
           <input
             className="registration-form__radio"
             type="radio"
             name="sex"
             value="male"
+            defaultChecked
           ></input>
           Мужчина
         </label>
-        <label>
+        <label className="registration-form__radio-label">
           <input
             className="registration-form__radio"
             type="radio"
@@ -62,7 +61,9 @@ const RegistrationForm = () => {
       <Button arrow>перейти к оплате</Button>
       <div className="registration-form__login">
         <div>Уже есть аккаунт на Toxin</div>
-        <Button secondary>войти</Button>
+        <Link to="/login">
+          <Button secondary>войти</Button>
+        </Link>
       </div>
     </form>
   );

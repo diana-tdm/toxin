@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Link } from "gatsby";
 import Logo from "../../images/main/logo-header.svg";
 import Button from "../UI/Button";
 import "./style.scss";
@@ -8,9 +9,9 @@ const Header = () => {
   return (
     <header className="header">
       <div className="container container__header">
-        <a href="/">
+        <Link to="/">
           <img src={Logo} alt="logo-header" />
-        </a>
+        </Link>
         <div className="header__nav">
           <nav>
             <ul>
@@ -31,10 +32,12 @@ const Header = () => {
               </li>
             </ul>
           </nav>
-          <Button secondary addClass="header__mr20">
-            войти
-          </Button>
-          <Button>зарегистрироваться</Button>
+          <Link to="/login" className="header__mr20">
+            <Button secondary>войти</Button>
+          </Link>
+          <Link to="/registration">
+            <Button>зарегистрироваться</Button>
+          </Link>
         </div>
       </div>
     </header>

@@ -1,18 +1,18 @@
 import * as React from "react";
 import Header from "../components/Header";
-import BannerRegistration from "../components/BannerRegistration";
+import BannerLogin from "../components/BannerLogin";
 import Footer from "../components/Footer";
 
 // markup
-const RegistrationPage = () => {
+const LoginPage = () => {
   return (
     <main>
       <title>Отель Toxin</title>
       <Header />
-      <BannerRegistration />
+      <BannerLogin />
       <Footer />
     </main>
   );
 };
 
-export default RegistrationPage;
+export default LoginPage;
