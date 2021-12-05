@@ -56,7 +56,12 @@ const Footer = () => {
 
       <div className="container">
         <div className="footer__social">
-          <div>Copyright © 2018 Toxin отель. Все права зачищены.</div>
+          <div>
+            <span className="footer__social-text">
+              Copyright © 2018 Toxin отель.
+            </span>
+            <span className="footer__social-text"> Все права зачищены.</span>
+          </div>
           <div className="footer__icons">
             <a className="footer__icon">
               <FontAwesomeIcon icon={faTwitter} size="2x" />
