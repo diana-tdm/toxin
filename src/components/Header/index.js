@@ -12,8 +12,11 @@ const Header = () => {
         <Link to="/">
           <img src={Logo} alt="logo-header" />
         </Link>
+        <button class="header__btn">
+          <span></span>
+        </button>
         <div className="header__nav">
-          <nav>
+          <nav className="header__menu">
             <ul>
               <li className="header__link">
                 <a href="">О нас</a>

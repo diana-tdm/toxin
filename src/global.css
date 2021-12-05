@@ -96,3 +96,15 @@ h6 {
   width: 1160px;
   margin: 0px auto;
 }
+
+@media (max-width: 768px) {
+  .container {
+    width: 720px;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    width: calc(100% - 20px);
+  }
+}
