@@ -1,0 +1,47 @@
+.footer-accordion {
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: #1f2041;
+    width: 100%;
+    margin-bottom: 21px;
+    padding-right: 20px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+  }
+
+  &__icon {
+    display: none;
+    color: rgba(31, 32, 65, 0.5);
+    transition: 0.3s;
+    @media (max-width: 576px) {
+      display: block;
+    }
+    &--active {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    @media (max-width: 576px) {
+      display: none;
+    }
+    &--open {
+      display: flex;
+    }
+  }
+
+  &__link {
+    font-size: 14px;
+    line-height: 17px;
+    color: rgba(31, 32, 65, 0.5);
+    margin-bottom: 20px;
+  }
+}

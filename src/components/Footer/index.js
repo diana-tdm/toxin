@@ -6,8 +6,9 @@ import {
   faInstagram,
   faFacebookSquare,
 } from "@fortawesome/free-brands-svg-icons";
-import "./style.scss";
 import EmailInput from "../UI/EmailInput";
+import FooterAccordion from "../UI/FooterAccordion";
+import "./style.scss";
 
 // markup
 const Footer = () => {
@@ -23,26 +24,18 @@ const Footer = () => {
                 ассоциации «Отельные взгляды»
               </p>
             </div>
-            <div className="footer__nav">
-              <h4 className="footer__title">навигация</h4>
-              <a className="footer__link-item">О нас</a>
-              <a className="footer__link-item">Новости</a>
-              <a className="footer__link-item">Служба поддержки</a>
-              <a className="footer__link-item">Услуги</a>
-            </div>
-            <div className="footer__nav">
-              <h4 className="footer__title">о нас</h4>
-              <a className="footer__link-item">О сервисе</a>
-              <a className="footer__link-item">Наша команда</a>
-              <a className="footer__link-item">Вакансии</a>
-              <a className="footer__link-item">Инвесторы</a>
-            </div>
-            <div className="footer__nav">
-              <h4 className="footer__title">Служба поддержки</h4>
-              <a className="footer__link-item">Соглашения</a>
-              <a className="footer__link-item">Сообщества</a>
-              <a className="footer__link-item">Связь с нами</a>
-            </div>
+            <FooterAccordion
+              title="навигация"
+              links={["О нас", "Новости", "Служба поддержки", "Услуги"]}
+            />
+            <FooterAccordion
+              title="о нас"
+              links={["О сервисе", "Наша команда", "Вакансии", "Инвесторы"]}
+            />
+            <FooterAccordion
+              title="Служба поддержки"
+              links={["Соглашения", "Сообщества", "Связь с нами"]}
+            />
             <div className="footer__mail">
               <h4 className="footer__title">Подписка</h4>
               <p className="footer__text">
