@@ -5,8 +5,8 @@ import "./style.scss";
 // markup
 const BannerLogin = () => {
   return (
-    <section className="banner-registration">
-      <div className="container container--registration">
+    <section className="banner-login">
+      <div className="container container--login">
         <LoginForm />
       </div>
     </section>

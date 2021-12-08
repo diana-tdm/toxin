@@ -1,0 +1,12 @@
+.banner-login {
+  display: flex;
+  height: calc(100vh - 70px);
+  min-height: 450px;
+  background: url(../../images/banner02.jpg) no-repeat center / cover;
+}
+
+.container--login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
