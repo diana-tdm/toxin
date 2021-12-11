@@ -33,6 +33,15 @@
     }
   }
 
+  &__title {
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: #1f2041;
+    margin-bottom: 21px;
+  }
+
   &__input-email {
     width: 100%;
     background: #ffffff;
