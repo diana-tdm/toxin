@@ -1,0 +1,18 @@
+.room-slider {
+  display: flex;
+
+  &__main {
+    width: 66.666%;
+  }
+
+  &__small {
+    width: 33.333%;
+    & .awssld__controls {
+      opacity: 0;
+    }
+  }
+
+  & .awssld__bullets {
+    display: none;
+  }
+}

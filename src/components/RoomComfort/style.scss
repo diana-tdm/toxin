@@ -3,8 +3,10 @@
   flex-direction: row;
   align-items: center;
   border-bottom: 1px solid rgba(31, 32, 65, 0.1);
-  padding-bottom: 17px;
-  padding-top: 20px;
+  padding: 20px 0px 17px;
+  @media (max-width: 576px) {
+    padding-left: 10px;
+  }
 
   &:last-child {
     border-bottom: none;

@@ -1,5 +1,5 @@
 import * as React from "react";
-import RoomBanner from "../RoomBanner";
+import RoomSlider from "../UI/RoomSlider";
 import RoomInfo from "../RoomInfo";
 import Review from "../Review";
 import CalcForm from "../CalcForm";
@@ -10,7 +10,7 @@ const RoomDetails = () => {
   return (
     <>
       <div>
-        <RoomBanner />
+        <RoomSlider />
       </div>
       <div className="container container__room-details">
         <div className="room-details__info">
