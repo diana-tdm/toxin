@@ -6,19 +6,31 @@ import Checkbox from "../UI/Checkbox";
 import Properties from "../UI/Properties";
 import Comfort from "../UI/Comfort";
 import Addcomfort from "../UI/Addcomfort";
+import Button from "../UI/Button";
 import "./style.scss";
 
 // markup
 const Search = () => {
+  const [show, setShow] = React.useState(false);
+
+  function toggle() {
+    setShow(!show);
+  }
+
   return (
     <div className="search">
-      <SelectDate secondary />
-      <SelectGuest secondary />
-      <PriceRange />
-      <Checkbox />
-      <Properties />
-      <Comfort />
-      <Addcomfort />
+      <Button addClass="search__toggle" onClick={toggle}>
+        Фильтр
+      </Button>
+      <div className={`search__list ${show ? "search__list--show" : ""}`}>
+        <SelectDate secondary />
+        <SelectGuest secondary />
+        <PriceRange />
+        <Checkbox />
+        <Properties />
+        <Comfort />
+        <Addcomfort />
+      </div>
     </div>
   );
 };

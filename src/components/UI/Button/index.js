@@ -4,9 +4,16 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import "./style.scss";
 
 // markup
-const Button = ({ children, secondary, arrow, addClass }) => {
+const Button = ({
+  children,
+  secondary,
+  arrow,
+  addClass,
+  onClick = () => {},
+}) => {
   return (
     <button
+      onClick={onClick}
       className={`button ${addClass} ${secondary ? "button--secondary" : ""} ${
         arrow ? "button--arrow" : ""
       }`}

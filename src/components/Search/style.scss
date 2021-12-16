@@ -1,4 +1,21 @@
 .search {
   grid-row: 1 / 5;
   grid-column: 1;
+
+  &__toggle {
+    display: none;
+    width: 100%;
+    @media (max-width: 576px) {
+      display: block;
+    }
+  }
+
+  &__list {
+    @media (max-width: 576px) {
+      display: none;
+    }
+    &--show {
+      display: block;
+    }
+  }
 }

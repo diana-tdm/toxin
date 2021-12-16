@@ -2,4 +2,7 @@
   display: grid;
   grid-template-columns: 266px 1fr;
   column-gap: 59px;
+  @media (max-width: 576px) {
+    grid-template-columns: 1fr;
+  }
 }
