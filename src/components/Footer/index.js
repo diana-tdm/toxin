@@ -24,18 +24,21 @@ const Footer = () => {
                 ассоциации «Отельные взгляды»
               </p>
             </div>
-            <FooterAccordion
-              title="навигация"
-              links={["О нас", "Новости", "Служба поддержки", "Услуги"]}
-            />
-            <FooterAccordion
-              title="о нас"
-              links={["О сервисе", "Наша команда", "Вакансии", "Инвесторы"]}
-            />
-            <FooterAccordion
-              title="Служба поддержки"
-              links={["Соглашения", "Сообщества", "Связь с нами"]}
-            />
+            <div className="footer__accordion">
+              <FooterAccordion
+                title="навигация"
+                links={["О нас", "Новости", "Служба поддержки", "Услуги"]}
+              />
+              <FooterAccordion
+                title="о нас"
+                links={["О сервисе", "Наша команда", "Вакансии", "Инвесторы"]}
+              />
+              <FooterAccordion
+                title="Служба поддержки"
+                links={["Соглашения", "Сообщества", "Связь с нами"]}
+              />
+            </div>
+
             <div className="footer__mail">
               <h4 className="footer__title">Подписка</h4>
               <p className="footer__text">

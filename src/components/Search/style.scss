@@ -5,13 +5,13 @@
   &__toggle {
     display: none;
     width: 100%;
-    @media (max-width: 576px) {
+    @media (max-width: 768px) {
       display: block;
     }
   }
 
   &__list {
-    @media (max-width: 576px) {
+    @media (max-width: 768px) {
       display: none;
     }
     &--show {

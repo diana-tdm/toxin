@@ -17,7 +17,7 @@ ul {
     display: flex;
     align-items: center;
 
-    @media (max-width: 576px) {
+    @media (max-width: 768px) {
       position: absolute;
       display: flex;
       flex-direction: column;
@@ -38,7 +38,7 @@ ul {
   }
 
   &__menu {
-    @media (max-width: 576px) {
+    @media (max-width: 768px) {
       display: flex;
       flex-direction: column;
     }
@@ -54,7 +54,7 @@ ul {
     background: none;
     border: none;
 
-    @media (max-width: 576px) {
+    @media (max-width: 768px) {
       display: flex;
     }
 
