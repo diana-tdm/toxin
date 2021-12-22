@@ -4,17 +4,17 @@ import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import "./style.scss";
 
 function countRoom(count) {
-  if (count == 1) return "1 спальня";
+  if (count === 1) return "1 спальня";
   if (count > 4) return `${count} спален`;
   return `${count} спальни`;
 }
 function countBed(count) {
-  if (count == 1) return "1 кровать";
+  if (count === 1) return "1 кровать";
   if (count > 4) return `${count} кроватей`;
   return `${count} кровати`;
 }
 function countBathroom(count) {
-  if (count == 1) return "1 ванная";
+  if (count === 1) return "1 ванная";
   if (count > 4) return `${count} ванных`;
   return `${count} ванные`;
 }
@@ -31,12 +31,12 @@ const Comfort = () => {
     setOpen(!open);
   };
 
-  const clear = () => {
-    setRoom(0);
-    setBed(0);
-    setBathroom(0);
-    setText("Сколько гостей");
-  };
+  // const clear = () => {
+  //   setRoom(0);
+  //   setBed(0);
+  //   setBathroom(0);
+  //   setText("Сколько гостей");
+  // };
 
   React.useEffect(() => {
     setText(

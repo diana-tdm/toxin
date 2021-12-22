@@ -59,13 +59,13 @@ const Footer = () => {
             <span className="footer__social-text"> Все права зачищены.</span>
           </div>
           <div className="footer__icons">
-            <a className="footer__icon">
+            <a href="/mock-address/change-me" className="footer__icon">
               <FontAwesomeIcon icon={faTwitter} size="2x" />
             </a>
-            <a className="footer__icon">
+            <a href="/mock-address/change-me" className="footer__icon">
               <FontAwesomeIcon icon={faFacebookSquare} size="2x" />
             </a>
-            <a className="footer__icon">
+            <a href="/mock-address/change-me" className="footer__icon">
               <FontAwesomeIcon icon={faInstagram} size="2x" />
             </a>
           </div>

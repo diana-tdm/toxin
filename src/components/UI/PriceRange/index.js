@@ -5,8 +5,8 @@ import "./style.scss";
 
 // markup
 const PriceRange = () => {
-  const [value, setValue] = React.useState("");
-  const onChange = () => {};
+  // const [value, setValue] = React.useState("");
+  // const onChange = () => {};
 
   return (
     <div className="price-range">

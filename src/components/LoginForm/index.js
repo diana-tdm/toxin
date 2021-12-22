@@ -1,10 +1,6 @@
 import * as React from "react";
 import { Link } from "gatsby";
 import Button from "../UI/Button";
-import SelectDate from "../UI/SelectDate";
-import SelectGuest from "../UI/SelectGuest";
-import Switch from "../UI/Switch";
-import SelectBirthday from "../UI/SelectBirthday";
 import "./style.scss";
 
 // markup

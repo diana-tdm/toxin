@@ -4,17 +4,17 @@ import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import "./style.scss";
 
 function countGuest(count) {
-  if (count == 1) return "1 гость";
+  if (count === 1) return "1 гость";
   if (count > 4) return `${count} гостей`;
   return `${count} гостя`;
 }
 function countChildren(count) {
-  if (count == 1) return "1 ребенок";
+  if (count === 1) return "1 ребенок";
   if (count > 4) return `${count} детей`;
   return `${count} ребенка`;
 }
 function countInfant(count) {
-  if (count == 1) return "1 младенец";
+  if (count === 1) return "1 младенец";
   if (count > 4) return `${count} младенцев`;
   return `${count} младенца`;
 }

@@ -26,19 +26,19 @@ const Header = () => {
           <nav>
             <ul className="header__menu">
               <li className="header__link">
-                <a href="">О нас</a>
+                <a href="/mock-address/change-me">О нас</a>
               </li>
               <li className="header__link">
-                <a href="">Услуги</a>
+                <a href="/mock-address/change-me">Услуги</a>
               </li>
               <li className="header__link">
-                <a href="">Вакансии</a>
+                <a href="/mock-address/change-me">Вакансии</a>
               </li>
               <li className="header__link">
-                <a href="">Новости</a>
+                <a href="/mock-address/change-me">Новости</a>
               </li>
               <li className="header__link">
-                <a href="">Соглашения</a>
+                <a href="/mock-address/change-me">Соглашения</a>
               </li>
             </ul>
           </nav>

@@ -33,7 +33,9 @@ const FooterAccordion = ({ title, links }) => {
         }`}
       >
         {links.map((link) => (
-          <a className="footer-accordion__link">{link}</a>
+          <a href="/mock-address/change-me" className="footer-accordion__link">
+            {link}
+          </a>
         ))}
       </div>
     </div>
