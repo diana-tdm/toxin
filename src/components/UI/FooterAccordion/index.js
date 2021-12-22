@@ -4,7 +4,7 @@ import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import "./style.scss";
 
 // markup
-const FooterAccordion = ({ title, links }) => {
+const FooterAccordion = ({ title, links = [] }) => {
   const [open, setOpen] = React.useState(false);
 
   const handleClick = () => {
