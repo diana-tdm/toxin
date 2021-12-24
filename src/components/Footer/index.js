@@ -8,6 +8,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import EmailInput from "../UI/EmailInput";
 import FooterAccordion from "../UI/FooterAccordion";
+import { Link } from "gatsby";
 import "./style.scss";
 
 // markup
@@ -59,15 +60,15 @@ const Footer = () => {
             <span className="footer__social-text"> Все права зачищены.</span>
           </div>
           <div className="footer__icons">
-            <a href="/mock-address/change-me" className="footer__icon">
+            <Link to="/mock-address/change-me" className="footer__icon">
               <FontAwesomeIcon icon={faTwitter} size="2x" />
-            </a>
-            <a href="/mock-address/change-me" className="footer__icon">
+            </Link>
+            <Link to="/mock-address/change-me" className="footer__icon">
               <FontAwesomeIcon icon={faFacebookSquare} size="2x" />
-            </a>
-            <a href="/mock-address/change-me" className="footer__icon">
+            </Link>
+            <Link to="/mock-address/change-me" className="footer__icon">
               <FontAwesomeIcon icon={faInstagram} size="2x" />
-            </a>
+            </Link>
           </div>
         </div>
       </div>

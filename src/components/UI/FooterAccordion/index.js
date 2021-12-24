@@ -1,6 +1,7 @@
 import * as React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "gatsby";
 import "./style.scss";
 
 // markup
@@ -33,9 +34,9 @@ const FooterAccordion = ({ title, links = [] }) => {
         }`}
       >
         {links.map((link) => (
-          <a href="/mock-address/change-me" className="footer-accordion__link">
+          <Link to="/mock-address/change-me" className="footer-accordion__link">
             {link}
-          </a>
+          </Link>
         ))}
       </div>
     </div>
