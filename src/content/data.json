@@ -1,0 +1,77 @@
+{
+  "rooms": [
+    {
+      "number": 888,
+      "price": 9990,
+      "lux": true,
+      "reviews": 145,
+      "stars": 5
+    },
+    {
+      "number": 840,
+      "price": 9900,
+      "reviews": 65,
+      "stars": 4
+    },
+    {
+      "number": 980,
+      "price": 8500,
+      "reviews": 31,
+      "stars": 3
+    },
+    {
+      "number": 856,
+      "price": 7300,
+      "reviews": 19,
+      "stars": 5
+    },
+    {
+      "number": 740,
+      "price": 6000,
+      "reviews": 44,
+      "stars": 4
+    },
+    {
+      "number": 982,
+      "price": 5800,
+      "reviews": 56,
+      "stars": 3
+    },
+    {
+      "number": 678,
+      "price": 5500,
+      "reviews": 45,
+      "stars": 5
+    },
+    {
+      "number": 450,
+      "price": 5300,
+      "reviews": 39,
+      "stars": 4
+    },
+    {
+      "number": 350,
+      "price": 5000,
+      "reviews": 77,
+      "stars": 3
+    },
+    {
+      "number": 666,
+      "price": 5000,
+      "reviews": 25,
+      "stars": 5
+    },
+    {
+      "number": 444,
+      "price": 5000,
+      "reviews": 15,
+      "stars": 4
+    },
+    {
+      "number": 352,
+      "price": 5000,
+      "reviews": 55,
+      "stars": 3
+    }
+  ]
+}

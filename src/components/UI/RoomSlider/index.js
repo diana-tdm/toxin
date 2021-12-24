@@ -12,7 +12,6 @@ const RoomSlider = ({ id }) => {
   const [prevSlide, setPrevSlide] = React.useState(3);
 
   function changeSlide(e) {
-    console.log(e);
     setNextSlide((e.nextIndex + 1) % 4);
     setPrevSlide((e.nextIndex + 3) % 4);
   }

@@ -6,7 +6,7 @@ import CalcForm from "../CalcForm";
 import "./style.scss";
 
 // markup
-const RoomDetails = () => {
+const RoomDetails = ({ id }) => {
   return (
     <>
       <div>
@@ -51,7 +51,7 @@ const RoomDetails = () => {
         </div>
 
         <div className="room-details__form">
-          <CalcForm />
+          <CalcForm id={id} />
         </div>
       </div>
     </>

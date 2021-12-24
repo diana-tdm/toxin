@@ -1,19 +1,23 @@
 import * as React from "react";
 import Button from "../UI/Button";
-
+import JSONData from "../../content/data.json";
 import "./style.scss";
 
 // markup
-const CalcForm = () => {
+const CalcForm = ({ id }) => {
   return (
     <form className="calc-form">
       <div className="calc-form__info">
         <div className="calc-form__number">
-          <span className="calc-form__element">№</span> 888{" "}
-          <span className="calc-form__type">люкс</span>
+          <span className="calc-form__element">№</span>{" "}
+          {JSONData.rooms[id - 1].number}{" "}
+          {JSONData.rooms[id - 1]?.lux && (
+            <span className="calc-form__type">люкс</span>
+          )}
         </div>
         <div className="calc-form__price">
-          9 990₽ <span className="calc-form__time">в сутки</span>
+          {JSONData.rooms[id - 1].price}₽{" "}
+          <span className="calc-form__time">в сутки</span>
         </div>
       </div>
       <div className="calc-form__dates">

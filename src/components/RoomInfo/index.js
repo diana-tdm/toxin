@@ -3,7 +3,7 @@ import RoomComfort from "../RoomComfort";
 import "./style.scss";
 
 // markup
-const RoomInfo = () => {
+const RoomInfo = ({ id }) => {
   return (
     <div className="room-info">
       <div className="room-info__items">
