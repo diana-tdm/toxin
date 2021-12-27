@@ -1,11 +1,17 @@
 import * as React from "react";
-import $ from "jquery";
+import $, { data } from "jquery";
 import "air-datepicker/dist/js/datepicker.js";
 import "air-datepicker/dist/css/datepicker.css";
 import "./style.scss";
 
 // markup
-const SelectDate = ({ children, secondary, arrow, addClass }) => {
+const SelectDate = ({
+  children,
+  secondary,
+  arrow,
+  addClass,
+  onChange = () => {},
+}) => {
   const arrivalField = React.useRef(null);
   const leaveField = React.useRef(null);
   const datesField = React.useRef(null);
@@ -13,6 +19,10 @@ const SelectDate = ({ children, secondary, arrow, addClass }) => {
 
   function onSelect(formattedDate, date, inst) {
     const dates = formattedDate.split(",");
+    let a = date[0];
+    let b = date[1];
+    onChange((b - a) / 24 / 60 / 60 / 1000);
+
     if (secondary) {
       const format = new Intl.DateTimeFormat("ru", {
         month: "short",

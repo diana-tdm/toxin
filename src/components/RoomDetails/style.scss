@@ -124,6 +124,7 @@
   &__form {
     width: 380px;
     margin-left: 70px;
+    flex-shrink: 0;
 
     @media (max-width: 768px) {
       order: -1;

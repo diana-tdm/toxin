@@ -1,10 +1,18 @@
 import * as React from "react";
 import Button from "../UI/Button";
+import SelectDate from "../UI/SelectDate";
+import SelectGuest from "../UI/SelectGuest";
 import JSONData from "../../content/data.json";
 import "./style.scss";
 
 // markup
 const CalcForm = ({ id }) => {
+  const [days, setDays] = React.useState(0);
+
+  function changeDays(days) {
+    setDays(days);
+  }
+
   return (
     <form className="calc-form">
       <div className="calc-form__info">
@@ -16,38 +24,20 @@ const CalcForm = ({ id }) => {
           )}
         </div>
         <div className="calc-form__price">
-          {JSONData.rooms[id - 1].price}₽{" "}
+          {JSONData.rooms[id - 1].price.toLocaleString()}₽{" "}
           <span className="calc-form__time">в сутки</span>
         </div>
       </div>
-      <div className="calc-form__dates">
-        <div className="calc-form__date">
-          <label className="calc-form__date-label">
-            прибытие
-            <input className="calc-form__date-input" type="date"></input>
-          </label>
-        </div>
-        <div className="calc-form__date">
-          <label className="calc-form__date-label">
-            выезд<input className="calc-form__date-input" type="date"></input>
-          </label>
-        </div>
-      </div>
-      <label className="calc-form__date-label">
-        гости
-        <select className="calc-form__select">
-          <option value="" disabled selected>
-            Сколько гостей
-          </option>
-          <option value="1">1 гость</option>
-          <option value="2">2 гостя</option>
-          <option value="2">3 гостя</option>
-        </select>
-      </label>
+      <SelectDate onChange={changeDays} />
+      <SelectGuest />
       <div className="calc-form__services">
         <div className="calc-form__services-list">
-          <div className="calc-form__services-text">9 990₽ х 4 суток</div>
-          <div className="calc-form__services-price">39 960₽</div>
+          <div className="calc-form__services-text">
+            {JSONData.rooms[id - 1].price.toLocaleString()}₽ х {days} суток
+          </div>
+          <div className="calc-form__services-price">
+            {(JSONData.rooms[id - 1].price * days).toLocaleString()}₽
+          </div>
         </div>
         <div className="calc-form__services-list">
           <div className="calc-form__services-text">
@@ -70,7 +60,14 @@ const CalcForm = ({ id }) => {
         <div className="calc-form__services-total">
           <div className="calc-form__services-total-text">Итого</div>
           <div className="calc-form__services-total-border"></div>
-          <div className="calc-form__services-total-price">38 081₽</div>
+          <div className="calc-form__services-total-price">
+            {(
+              JSONData.rooms[id - 1].price * days -
+              2179 +
+              300
+            ).toLocaleString()}
+            ₽
+          </div>
         </div>
       </div>
       <div className="calc-form__button">
